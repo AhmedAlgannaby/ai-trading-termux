@@ -1,0 +1,26 @@
+{
+  "name": "ai-trading-termux",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AI Trading - Termux 24/7 copy (server-only + prebuilt dist)",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js",
+    "test": "node server/brain/brain.test.js && node server/brain/edge.test.js && node server/worker/worker.test.js && node server/worker/gate.test.js && node server/functions.test.js && node server/llm.test.js",
+    "test:brain": "node server/brain/brain.test.js",
+    "history:fetch": "node server/brain/history.js",
+    "history:gaps": "node server/brain/history.js --gaps",
+    "history:learn": "node server/brain/learn.js",
+    "backtest:micro": "node scripts/micro-backtest.js || true",
+    "health": "node scripts/health.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}

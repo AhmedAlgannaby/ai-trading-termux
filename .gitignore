@@ -1,0 +1,31 @@
+# Dependencies & build
+node_modules/
+dist/*.map
+
+# Secrets / local config (use .env.example instead)
+.env
+.env.*
+!.env.example
+
+# Runtime data (JSON DB — stays on the phone, not in git)
+server/data/*.json
+server/data/candles/
+!server/data/.gitkeep
+
+# Logs & backups
+logs/
+backups/
+*.log
+*.out
+*.err
+*.tmp
+*.bak
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Archives
+*.zip
